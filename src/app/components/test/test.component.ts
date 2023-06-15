@@ -8,20 +8,14 @@ import { TestService } from 'src/app/services/test.service';
   providers: [
     {
       provide: dataToken,
-      useClass: TestService
-    }
-  ]
+      useClass: TestService,
+    },
+  ],
 })
 export class TestComponent implements OnInit {
-
-  constructor(private testService: TestService) {
-
-
-  }
-  ngOnInit(): void {
-
-  }
+  constructor(private testService: TestService) {}
+  ngOnInit(): void {}
   getService() {
-    return this.testService
+    return this.testService;
   }
 }
